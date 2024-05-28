@@ -14,7 +14,7 @@ export function ArticleCard({ article }) {
         href={`/words/${article.meta.slug}`}
 
       >
-        <div className="lowercase flex justify-between items-center">
+        <div className=" flex justify-between items-center">
           <div
             className={
               "text-gray-900 dark:text-gray-50 group-hover:underline underline-offset-8"

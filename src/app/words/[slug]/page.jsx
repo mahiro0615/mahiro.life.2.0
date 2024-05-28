@@ -41,24 +41,18 @@ export default async function ArticlePage({ params }) {
     <>
       <Header>
         <div className={classNames("gap-x-2 mb-4 space-x-2")}>
-          <Link
-            href="/words"
-            className="opacity-60 hover:underline underline-offset-4"
-          >
-            Stories
-          </Link>
-          <span className="opacity-50">/</span>
-          <h1 className="inline">{meta.title}</h1>
+          <h1 className="inline text-4xl font-bold">{meta.title}</h1>
         </div>
-        <p className="lowercase">
+        <p className = 'italic'>
           <ArticleTime date={meta.date} /> -{" "}
           <span className="opacity-70">{meta.readingTime} Minute Read</span>
         </p>
       </Header>
       <Content>
-        <article className="max-w-full px-0 prose md:prose-lg dark:prose-invert">
+        <article className="max-w-full px-0 prose mt-6 md:prose-lg font-Default">
           {content}
         </article>
+        <div className = 'pb-8 border-b'> </div>
         {siteMetadata.comments && (
                 <div
                   className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
