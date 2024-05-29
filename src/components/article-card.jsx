@@ -1,10 +1,5 @@
 import { ArticleTime } from "@/components/article-time";
 import Link from "next/link";
-import {
-  CheckCircleIcon,
-  EyeIcon,
-  EyeSlashIcon,
-} from "@heroicons/react/24/outline";
 import { classNames } from "@/functions/class-names";
 
 export function ArticleCard({ article }) {
