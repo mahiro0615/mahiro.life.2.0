@@ -38,7 +38,9 @@ const ArticlesList = ({ articles }) => {
         ))}
       </div>
       {sortedArticles.map((article) => (
-        <ArticleCard article={article} key={article.meta.title} />
+        <div key={article.meta.title} className="mb-6">
+          <ArticleCard article={article} />
+        </div>
       ))}
     </div>
   );
