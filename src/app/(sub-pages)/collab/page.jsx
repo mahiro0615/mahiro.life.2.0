@@ -23,7 +23,7 @@ export default async function CollabPage() {
       <h1 className = 'block mb-6 text-2xl font-bold'> Let&apos;s collab </h1>
           
         <p className = 'font-Default'>
-         And by collab, I mean let&apos;s be part of each other&apos;s lives. Whether through facetime, text, or even you visiting me to Japan!? Or if you have some cool ideas(or not cool ideas), we can play catch with thoughts. Honestly whatever is cool, I&apos;m a social creature and I would love me some human interaction in any form.
+         And by collab, I mean let&apos;s be part of each other&apos;s lives. Whether through facetime, text, or even you visiting me in Japan!? Or if you have some cool ideas(or not cool ideas), we can play catch with thoughts. Honestly whatever is cool, I&apos;m a social creature and I would love me some human interaction in any form.
         </p>
       
       </Header>
@@ -39,7 +39,7 @@ export default async function CollabPage() {
       <p className = 'flex text-2xl font-bold justify-center'> Mahiro Yamakawa</p>
         <div className="flex items-center justify-center mt-4">
           <Image src="/image/whatsapp-icon.png" alt="WhatsApp Icon" width={24} height={24}/>
-          <p className="text-black ml-2 font-medium">860-280-1300 (WhatsApp)</p>
+          <p className="text-black ml-2 font-medium">+1-860-280-1300 (WhatsApp)</p>
         </div>
         <div className="flex items-center justify-center mt-2">
           
