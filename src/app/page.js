@@ -5,9 +5,27 @@ import { getArticles, getArticle} from "@/functions/markdown";
 import Link from "next/link";
 
 export const metadata = {
+  metadataBase: new URL('https://mahiro.life'),
   title: "Mahiro.life by Mahiro Yamakawa",
+  description: "Welcome to Mahiro.life, the personal blog of Mahiro Yamakawa. Discover thoughts, projects, and insights.",
+  author: "Mahiro Yamakawa",
+  keywords: ["Mahiro Yamakawa", "Mahiro.life", "blog", "projects","Mahiro", "Yamakawa"],
   alternates: {
     canonical: `/`,
+  },
+  openGraph: {
+    title: "Mahiro.life by Mahiro Yamakawa",
+    description: "Welcome to Mahiro.life, the personal blog and portfolio of Mahiro Yamakawa. Discover thoughts, projects, and insights.",
+    url: "https://mahiro.life",
+    type: "website",
+    images: [
+      {
+        url: "/images/profile-picture.jpg",
+        width: 800,
+        height: 600,
+        alt: "Mahiro Yamakawa",
+      },
+    ],
   },
 };
 

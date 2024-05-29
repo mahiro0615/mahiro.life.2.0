@@ -5,7 +5,7 @@ import ArticlesList from "@/components/article-list"; // Import the new Articles
 
 export const metadata = {
   title: "A Collection of Thoughts and Ideas",
-  description: "A selection of thoughts, ideas, and reflections to help you think differently.",
+  description: "Words in interesting ways",
   alternates: {
     canonical: `/words`,
   },

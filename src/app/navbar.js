@@ -27,7 +27,7 @@ export function Navbar() {
           ].map((link) => (
             <li
               key={link.name}
-              className="decoration-gray-200 hover:decoration-gray-600 duration-200 hover:text-pink-400"
+              className="decoration-gray-200 hover:decoration-gray-600 hover:text-pink-400"
 
          >
 
