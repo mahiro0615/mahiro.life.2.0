@@ -42,8 +42,8 @@ export default async function Home() {
             I&apos;m so glad you made it here
           </span>
           <div className='font-Default'> 
-          What is this all about? Who am I? What is consciousness? Now what? All good questions with no good answers. If I try to answer them, I'll be wrong; if I don’t answer them, I'll still be wrong.<br></br><br></br>
-All I know is that I’m confused. But being confused feels so much better when I’m confused with you. I want this to serve as a collection of pieces to THE puzzle. The name of the puzzle can’t be named, but I know you have a glimpse of what it is. Just go with the vibe.
+          What is this all about? Who am I? What is consciousness? Now what? All good questions with no good answers. If I try to answer them, I&apos;ll be wrong; if I don&apos;t answer them, I&apos;ll still be wrong.<br></br><br></br>
+All I know is that I&apos;m confused. But being confused feels so much better when I&apos;m confused with you. I want this to serve as a collection of pieces to THE puzzle. The name of the puzzle can&apos;t be named, but I know you have a glimpse of what it is. Just go with the vibe.
 
           </div>
       </Header>

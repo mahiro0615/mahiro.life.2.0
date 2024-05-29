@@ -2,6 +2,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./navbar";
 import { Content } from "@/components/content";
+import Image from 'next/image';
 
 export const metadata = {
   title: "Mahiro Yamakawa",
@@ -24,10 +25,11 @@ export default function RootLayout({ children }) {
           <p className="opacity-100 font-Default text-gray-400" >
             Sweeping the garden while enjoying the beaty of it. Working on the website while being content with it.
           </p>
-          <img
+          <Image
         src="/logo-words.png" 
         alt="Footer logo"
-        className="w-32 h-32"
+        width="85"
+        height="85"
       />
   
         </Content>
