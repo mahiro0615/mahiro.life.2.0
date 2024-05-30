@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Content as="footer" className="py-20 flex items-center space-x-4">
           <p className="opacity-100 font-Default text-gray-400" >
-            Sweeping the garden while enjoying the beaty of it. Working on the website while being content with it.
+            Sweeping the garden while enjoying the beauty of it. Working on the website while being content with it.
           </p>
           <Image
         src="/logo-words.png" 
