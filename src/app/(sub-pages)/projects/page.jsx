@@ -1,50 +1,47 @@
-import { Content } from "@/components/content";
-import { Header } from "@/components/header";
-import Link from 'next/link';
-import path from 'path';
-import fs from 'fs/promises';
+import { getProjectSlugs, getProject } from '@/functions/project-markdown';
+import { Header } from '@/components/header';
+import { Content } from '@/components/content';
+import { ProjectCard } from '@/components/project-card';
 
-export const metadata = {
-  title: "Projects",
-  description: "Things I am working on",
-  alternates: {
-    canonical: `/projects`,
-  },
-};
+export default async function ProjectsPage() {
+  const slugs = getProjectSlugs();
+  const projects = await Promise.all(slugs.map(slug => getProject(slug)));
 
-async function getProjects() {
-  const projectsDirectory = path.join(process.cwd(), 'projects');
-  try {
-    const files = await fs.readdir(projectsDirectory);
-    return files.map(file => file.replace('.mdx', ''));
-  } catch (error) {
-    console.error('Error reading projects directory:', error);
-    return [];
-  }
-}
-
-export default async function ProjectPage() {
-  const projects = await getProjects();
+  const currentProjects = projects.filter(project => project.meta.status === 'current');
+  const dormantProjects = projects.filter(project => project.meta.status === 'dormant');
+  const incubatingProjects = projects.filter(project => project.meta.status === 'incubating');
 
   return (
-    <div className="space-y-8">
+    <>
       <Header>
-        <h1 className='block mb-6 text-2xl font-bold'>Projects</h1>
-        <p className='font-Default'>
-          Things I am working on
-        </p>
+        <h1 className="text-4xl font-bold">Projects</h1>
       </Header>
       <Content>
-        <ul>
-          {projects.map((project) => (
-            <li key={project}>
-              <Link href={`/project/${project}`}>
-                {project}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Current Projects</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {currentProjects.map(project => (
+              <ProjectCard key={project.meta.slug} project={project} />
+            ))}
+          </div>
+        </section>
+        <section className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Dormant Projects</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {dormantProjects.map(project => (
+              <ProjectCard key={project.meta.slug} project={project} />
+            ))}
+          </div>
+        </section>
+        <section className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Incubating Projects</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {incubatingProjects.map(project => (
+              <ProjectCard key={project.meta.slug} project={project} />
+            ))}
+          </div>
+        </section>
       </Content>
-    </div>
+    </>
   );
 }
