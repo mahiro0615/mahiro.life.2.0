@@ -20,6 +20,7 @@ module.exports = {
         Default: ['verdana', 'sans-serif'], // Custom font family
         Geo: ['Georgia', 'sans-serif'],
         Hel: ['Helvetica', 'sans-serif'],
+        sans: ['Helvetica', 'Futura', 'sans-serif'],
       },
 
       

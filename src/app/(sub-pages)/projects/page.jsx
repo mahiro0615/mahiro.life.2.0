@@ -2,6 +2,7 @@ import { getProjectSlugs, getProject } from '@/functions/project-markdown';
 import { Header } from '@/components/header';
 import { Content } from '@/components/content';
 import { ProjectCard } from '@/components/project-card';
+import Image from 'next/image';
 
 export default async function ProjectsPage() {
   const slugs = getProjectSlugs();
@@ -18,7 +19,10 @@ export default async function ProjectsPage() {
       </Header>
       <Content>
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Current Projects</h2>
+        <div className="flex items-center space-x-2 mb-4 mt-4">
+          <Image src="/image/active.png" alt="active" width={32} height={32}/>
+         <h2 className="text-2xl font-semibold ">Active Projects</h2>
+        </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {currentProjects.map(project => (
               <ProjectCard key={project.meta.slug} project={project} />
@@ -26,7 +30,10 @@ export default async function ProjectsPage() {
           </div>
         </section>
         <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-4">Dormant Projects</h2>
+        <div className="flex items-center space-x-2 mb-4 mt-4">
+          <Image src="/image/dormant.png" alt="dormant" width={32} height={32}/>
+          <h2 className="text-2xl font-semibold ">Dormant Projects</h2>
+        </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {dormantProjects.map(project => (
               <ProjectCard key={project.meta.slug} project={project} />
@@ -34,7 +41,10 @@ export default async function ProjectsPage() {
           </div>
         </section>
         <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-4">Incubating Projects</h2>
+        <div className="flex items-center space-x-2 mb-4 mt-4">
+          <Image src="/image/incubating.png" alt="incubating" width={32} height={32}/>
+          <h2 className="text-2xl font-semibold ">Incubating Projects</h2>
+        </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {incubatingProjects.map(project => (
               <ProjectCard key={project.meta.slug} project={project} />
