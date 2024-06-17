@@ -6,7 +6,7 @@ import readingTime from "reading-time";
 import { markdownComponents } from "@/components/snippets/markdown-components";
 
 // Paths to project files and subpage files
-const PROJECTS_PATH = path.join(process.cwd(), "src/projects-id");
+const PROJECTS_PATH = path.join(process.cwd(), "src/projects-ID");
 const SUBPAGE_PATH = path.join(process.cwd(), "src/project-content");
 
 // Get a list of project slugs
