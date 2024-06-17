@@ -16,7 +16,7 @@ export function getProjectSlugs() {
   return paths.map((filePath) => {
     const parts = filePath.split(path.sep);
     const fileName = parts[parts.length - 1];
-    const [slug] = fileName.split(".");
+    const [slug, _ext] = fileName.split(".");
     return slug;
   });
 }
