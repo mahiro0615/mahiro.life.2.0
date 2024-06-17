@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { getProjectSlugs, getProject } from '@/functions/project-markdown';
 import { Header } from '@/components/header';
 import { Content } from '@/components/content';
