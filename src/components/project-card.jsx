@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { classNames } from '@/functions/class-names';
 
-export function ProjectCard({ project }) {
+export default function ProjectCard({ project }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const getStatusLogo = (status) => {

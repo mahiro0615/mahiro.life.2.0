@@ -1,7 +1,7 @@
 import { getProjectSlugs, getProject } from '@/functions/project-markdown';
 import { Header } from '@/components/header';
 import { Content } from '@/components/content';
-import { ProjectCard } from '@/components/project-card';
+import  ProjectCard  from '@/components/project-card';
 import Image from 'next/image';
 
 export default async function ProjectsPage() {
