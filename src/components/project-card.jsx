@@ -58,7 +58,7 @@ export default function ProjectCard({ project }) {
          {/* Back of the card */}
          <div className="absolute w-full h-full rounded-3xl shadow-2xl transform rotateY-180 backface-hidden flex flex-col">
             <div className="relative w-full h-1/2 overflow-hidden rounded-t-3xl">
-              <Image src={getStatusBackgroundImage(project.meta.status)} alt="Project Poster" fill className="object-cover rounded-t-3xl"/>
+              <Image src={getStatusBackgroundImage(project.meta.status)} alt="Project Poster" fill className="object-cover rounded-t-3xl object-top" />
               <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-transparent to-transparent flex flex-col justify-center items-center p-4">
                 <h3 className="text-2xl font-bold text-white uppercase text-center">{project.meta.title}</h3>
               </div>
