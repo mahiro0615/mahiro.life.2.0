@@ -2,6 +2,8 @@ import { ArticleCard } from "@/components/article-card";
 import { Header } from "@/components/header";
 import { classNames } from "@/functions/class-names";
 import { getArticles, getArticle} from "@/functions/markdown";
+import { MentalFramework } from "@/components/mental-framework"; 
+import { getFrameworks } from "@/functions/get-frameworks";
 import Link from "next/link";
 
 export const metadata = {
@@ -32,6 +34,11 @@ export const metadata = {
 
 export default async function Home() {
   const articles = await getArticles();
+  const frameworks = getFrameworks();
+  const currentFrameworks = frameworks.filter(
+    (framework) => framework.status === 'current'
+  );
+  const archivedLink = "/archived-frameworks";
 
 
 
@@ -54,7 +61,7 @@ All I know is that I&apos;m confused. But being confused feels so much better wh
               "gap-x-2 mb-4 space-x-2",
             )}
           >
-            <h2 className="inline font-bold">Recent uploads</h2>
+            <h2 className="inline font-bold">📝 Recent uploads</h2>
             <span className="opacity-60">/</span>
             <Link
               href="/words"
@@ -64,7 +71,7 @@ All I know is that I&apos;m confused. But being confused feels so much better wh
             </Link>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-6 pl-4">
             {articles
               .sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
               .slice(0, 4)     
@@ -72,7 +79,13 @@ All I know is that I&apos;m confused. But being confused feels so much better wh
                 <ArticleCard article={article} key={article.meta.title} />
               ))}             
           </div>
+
         </section>
+        
+        <section >
+          <MentalFramework currentFrameworks={currentFrameworks} archivedLink={archivedLink} />
+        </section>
+     
       </div>
     </div>
   );
