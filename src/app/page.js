@@ -8,8 +8,8 @@ import Link from "next/link";
 
 export const metadata = {
   metadataBase: new URL('https://mahiro.life'),
-  title: "Mahiro.life by Mahiro Yamakawa",
-  description: "Welcome to Mahiro.life, the personal blog of Mahiro Yamakawa. Discover thoughts, projects, and insights.",
+  title: "Mahiro.life",
+  description: "Words and stuff by Mahiro",
   author: "Mahiro Yamakawa",
   keywords: ["Mahiro Yamakawa", "Mahiro.life", "blog", "projects","Mahiro", "Yamakawa"],
   alternates: {

@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }) {
         </p>
       </Header>
       <Content>
-        <article className="max-w-full px-0 prose mt-6 md:prose-lg font-Default">
+        <article className="max-w-full px-0 prose mt-6 md:prose-lg font-Default dark:text-white">
           {content}
         </article>
         <div className = 'pb-8 border-b'> </div>
